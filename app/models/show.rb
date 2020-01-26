@@ -4,7 +4,9 @@ class Show < ActiveRecord::Base
   has_many :actors, through: :characters
 
   def actors_list
-    self.actors
+    self.actors.collect |x|
+
+  end
   end
 
 end
